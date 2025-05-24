@@ -3,7 +3,7 @@
 
 let products = JSON.parse(localStorage.getItem('products')) || [
     { name: 'Dress', price: 2000, description: 'Wonderful design', category: 'Clothes', image: 'dress2.webp' },
-    { name: 'Shoes', price: 500, description: 'Comfortable shoes', category: 'Footwear', image: 'shoes.jpeg' },
+    { name: 'Shoes', price: 500, description: 'Comfortable shoes', category: 'Footwear', image: 'shoes1.jpeg' },
     { name: 'Hand Bag', price: 1000, description: 'Latest model', category: 'Bags', image: 'bag.jpeg' },
     { name: 'Bracelet', price: 3000, description: 'Beautiful design', category: 'Accessories', image: 'accessory.jpeg' }
 ];
