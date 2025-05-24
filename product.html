@@ -1,0 +1,45 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+  <header>
+    <h1>Product Catalog</h1>
+    <nav>
+      <span>Cart: <span id="cart-count">0</span> items</span>
+    </nav>
+  </header>
+
+  <section>
+    <select id="category-filter">
+      <option value="all">ALL Categories</option>
+    </select>
+    
+    <input type="text" id="search-input" placeholder="Search products...">
+    <button onclick="openProductForm()">Add Product</button>
+  </section>
+
+  <div id="product-list" class="product-list"></div>
+
+  <section id="product-form">
+    <h2>New Product</h2>
+    <input type="text" id="product-name" placeholder="Product Name" required/>
+    <input type="number" id="product-price" placeholder="Product Price" required/>
+    <input type="text" id="product-description" placeholder="Product Description" required/>
+    <input type="text" id="product-category" placeholder="Product Category" required/>
+    <input type="text" id="product-image" placeholder="Product Image Path (e.g. images/shoes.jpeg)" required/>
+    <button onclick="saveNewProduct()">Save Product</button>
+    <button onclick="closeProductForm()">Cancel</button>
+  </section>
+
+  <script src="product.js"></script>
+  
+</body>
+</html>

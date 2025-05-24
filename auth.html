@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticaion</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="form-wrapper" id="signup-form">
+            <h2>Sign Up</h2>
+            <form onsubmit="handleSignUp(event)">
+                <lable for="signup-username">Username</lable>
+                <input type="text" id="signup-username" required>
+
+                <lable for="signup-email">Email</lable>
+                <input type="email" id="signup-email" required>
+
+               <lable for="signup-password">Password</lable>
+                <input type="password" id="signup-password" required oninput="checkPasswordStrength(this.value)"> 
+                <p id="password-strength" class="strength"></p>
+
+                <lable for="signup-confirm-password">Confirm Password</lable>
+                <input type="password" id="signup-confirm-password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="toggleForms('login')">Login</a></p>
+        </div>
+        <div class="form-wrapper" id="login-form" style="display:none;">
+            <h2>Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="toggleForms('signup')">Sign Up</a></p>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script src="product.js"> </script>
+</body>
+</html>
